@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Read</title>
+
+		<!-- Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Slick slider -->
+		<!-- Add the slick-theme.css if you want default styling -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<!-- Add the slick-theme.css if you want default styling -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="../src/styles/styles.css"
+		/>
+	</head>
+	<body>
+		<div class="app">
+			<!-- Header -->
+			<header
+				id="header"
+				class="header"
+			>
+				<!-- Header Top Menu -->
+				<div class="header-top container-fluid">
+					<div class="header-top__container container">
+						<div class="header-top__content">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="15"
+								height="15"
+								viewBox="0 0 105 105"
+								fill="none"
+							>
+								<path
+									d="M11.625 31.75C11.625 31.75 11.1667 32.9583 10.25 35.375C9.41666 37.7083 10.25 40.5833 12.75 44C12.75 44 13.2083 43.4167 14.125 42.25C15.0417 41.0833 17.4583 40.5 21.375 40.5H30.875C35.2917 40.5 38.7917 38.75 41.375 35.25C44.0417 31.6667 44.3333 27.6667 42.25 23.25C42.25 23.25 43.375 23.2083 45.625 23.125C47.875 22.9583 49.5417 21.9167 50.625 20C51.625 18 51.7083 16.5833 50.875 15.75C50.0417 14.9167 48.8333 14.5 47.25 14.5H31.5C31.5 15.9167 30.5833 16.6667 28.75 16.75C27 16.8333 26.125 16.0833 26.125 14.5H17.25C17.25 14.5 16.125 14.75 13.875 15.25C11.625 15.6667 10.4583 17.2917 10.375 20.125C10.375 20.125 10.6667 19.9583 11.25 19.625C11.9167 19.2917 12.625 19.0833 13.375 19V20.5C13.375 20.5 13.0417 20.5833 12.375 20.75C11.7083 20.9167 11.1667 21.125 10.75 21.375C10.3333 21.5417 9.91666 22 9.5 22.75C9.08333 23.5 9.20833 24.6667 9.875 26.25C10.4583 27.8333 10.875 28.9583 11.125 29.625C11.375 30.2917 11.5 30.625 11.5 30.625C11.5 30.625 11.9167 30.3333 12.75 29.75C13.6667 29.1667 14.875 28.875 16.375 28.875H20C23.25 28.875 24.6667 29.9167 24.25 32C23.8333 34.0833 22.0417 35.125 18.875 35.125C15.625 35.125 13.5833 34.5833 12.75 33.5C12 32.3333 11.625 31.75 11.625 31.75ZM45 25.25C45 25.25 45.4167 25.2083 46.25 25.125C47.1667 25.0417 48 24.6667 48.75 24C48.75 24 50.2083 26.7917 53.125 32.375C56.125 37.875 52.375 46.2083 41.875 57.375C36.625 62.875 33.4167 67.9167 32.25 72.5C31.0833 77 30.8333 80.8333 31.5 84C32.25 87.1667 33.375 89.625 34.875 91.375C36.375 93.125 37.125 94 37.125 94C37.125 94 36.5833 94.875 35.5 96.625C34.4167 98.4583 34.4167 101.167 35.5 104.75C35.5 104.75 33.75 103.583 30.25 101.25C26.75 98.9167 23.3333 95.625 20 91.375C17.5833 88.375 15.5417 85 13.875 81.25C12.2083 77.5 11.5417 73.625 11.875 69.625C12.2083 65.625 13.8333 61.5833 16.75 57.5C19.5833 53.4167 24.3333 49.5417 31 45.875C31 45.875 31.875 45.3333 33.625 44.25C35.4583 43.25 37.3333 41.8333 39.25 40C41.25 38.1667 42.9583 36 44.375 33.5C45.7083 30.9167 45.9167 28.1667 45 25.25ZM23.375 12.375C23.375 12.375 24.0833 11.5417 25.5 9.875C27 8.20833 29.4167 7.375 32.75 7.375C35.3333 7.375 37.0417 6.91667 37.875 6C38.7083 5.08333 39.125 4.625 39.125 4.625C39.125 4.625 39.9583 3.91667 41.625 2.5C43.375 1.08333 47.0833 0.375 52.75 0.375C58 0.375 62.4583 1.16667 66.125 2.75C69.875 4.25 73.1667 6.16667 76 8.5C76 8.5 75.125 8.08333 73.375 7.25C71.625 6.33333 69.2917 5.70833 66.375 5.375C63.5417 5.04167 60.2917 5.29167 56.625 6.125C52.9583 6.95833 49.25 9.04167 45.5 12.375H23.375ZM87.375 44.375C87.2917 40.4583 86.4167 36.5417 84.75 32.625C83.1667 28.7083 80.75 25.25 77.5 22.25C74.3333 19.1667 70.3333 16.75 65.5 15C60.6667 13.1667 55 12.375 48.5 12.625C54.9167 7.20833 61.9583 5.66667 69.625 8C77.375 10.4167 83.6667 14.7917 88.5 21.125C93.4167 27.375 95.8333 34.625 95.75 42.875C95.75 51.2083 91.1667 58.5417 82 64.875C82 64.875 82.9583 62.9583 84.875 59.125C86.875 55.2083 87.7083 50.2917 87.375 44.375ZM52.375 14.375C60.375 14.125 67.0417 16.0417 72.375 20.125C77.7083 24.125 81.4167 29.0417 83.5 34.875C85.6667 40.7083 86.0833 46.7917 84.75 53.125C83.5 59.4583 80.2917 64.7917 75.125 69.125L54.375 79.125C54.375 79.125 54.3333 77.25 54.25 73.5C54.1667 69.75 56.6667 65.2917 61.75 60.125C64.25 57.625 66.5417 54.625 68.625 51.125C70.7083 47.625 71.7917 43.9583 71.875 40.125C71.9583 36.2917 70.6667 32.5 68 28.75C65.4167 24.9167 60.625 21.4167 53.625 18.25C53.625 18.25 53.625 17.7917 53.625 16.875C53.7083 15.875 53.2917 15.0417 52.375 14.375ZM50.75 23C50.75 23 51 22.7083 51.5 22.125C52.0833 21.5417 52.5 20.9167 52.75 20.25C58.75 22.75 63.0833 25.625 65.75 28.875C68.4167 32.125 69.8333 35.5833 70 39.25C70.1667 42.8333 69.2083 46.5 67.125 50.25C65.0417 54 62.2083 57.6667 58.625 61.25C54.2917 65.75 52.2083 70 52.375 74C52.5417 77.9167 52.625 79.875 52.625 79.875C52.625 79.875 50.7083 81.25 46.875 84C43.0417 86.6667 40.2083 89.4167 38.375 92.25C38.375 92.25 37.6667 91.4583 36.25 89.875C34.8333 88.2917 33.8333 86 33.25 83C32.6667 80 33.0417 76.3333 34.375 72C35.625 67.6667 38.9167 62.7917 44.25 57.375C49.5 52.0417 52.7917 47.25 54.125 43C55.4583 38.75 55.875 35.1667 55.375 32.25C54.875 29.25 53.9583 26.9583 52.625 25.375C51.375 23.7917 50.75 23 50.75 23Z"
+									fill="#DB4532"
+								></path>
+							</svg>
+
+							<a
+								href="https://www.gov.sg/"
+								target="_blank"
+								rel="noopener"
+								>A Singapore Government Agency Website</a
+							>
+
+							<button
+								type="button"
+								class="toggler"
+								data-bs-toggle="collapse"
+								data-bs-target="#headerTopToggleContent"
+								aria-controls="headerTopToggleContent"
+								aria-expanded="false"
+								aria-label="Toggle navigation"
+							>
+								<span>How to identify</span>
+								<i class="fa-solid fa-chevron-down"></i>
+							</button>
+						</div>
+					</div>
+					<!-- Collapse Menu Section -->
+					<div
+						class="collapse"
+						id="headerTopToggleContent"
+					>
+						<div class="header-top__toggle container">
+							<div class="header-top__menu">
+								<div class="header-top__item">
+									<div class="left">
+										<i class="fa-solid fa-globe"></i>
+									</div>
+									<div class="right">
+										<div class="title">Official website links end with .gov.sg</div>
+										<div class="content">
+											Government agencies communicate via .gov.sg websites &nbsp;
+											(e.g.go.gov.sg/open).
+											<a
+												href="https://www.gov.sg/trusted-sites#govsites"
+												rel="noopener"
+												target="_blank"
+												>Trusted websites</a
+											>
+										</div>
+									</div>
+								</div>
+								<div class="header-top__item">
+									<div class="left">
+										<i class="fa-solid fa-lock"></i>
+									</div>
+									<div class="right">
+										<div class="title">Secure websites use HTTPS</div>
+										<div class="content">
+											Look for a lock lock icon or https:// as an added precaution. share sensitive
+											information only on official, secure website
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Header Middle Menu -->
+				<div class="header-middle container-fluid">
+					<div class="container header-middle__container">
+						<div class="row align-items-center justify-content-between">
+							<div class="col">
+								<div class="d-flex align-items-center justify-content-start gap-4">
+									<a
+										href=""
+										class="header__logo"
+										style="border-width: 0px; border: 0px"
+										><img
+											src="https://www.activesgcircle.gov.sg/hs-fs/hubfs/raw_assets/public/Circle%202-0_2021-%20Circle%20Website%20Refresh/images/activeSG_Logo.png?width=1000&amp;height=476&amp;name=activeSG_Logo.png"
+											alt="ActiveSG Circle"
+											title="ActiveSG Circle"
+											srcset="
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/raw_assets/public/Circle%202-0_2021-%20Circle%20Website%20Refresh/images/activeSG_Logo.png?width=500&amp;height=238&amp;name=activeSG_Logo.png    500w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/raw_assets/public/Circle%202-0_2021-%20Circle%20Website%20Refresh/images/activeSG_Logo.png?width=1000&amp;height=476&amp;name=activeSG_Logo.png  1000w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/raw_assets/public/Circle%202-0_2021-%20Circle%20Website%20Refresh/images/activeSG_Logo.png?width=1500&amp;height=714&amp;name=activeSG_Logo.png  1500w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/raw_assets/public/Circle%202-0_2021-%20Circle%20Website%20Refresh/images/activeSG_Logo.png?width=2000&amp;height=952&amp;name=activeSG_Logo.png  2000w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/raw_assets/public/Circle%202-0_2021-%20Circle%20Website%20Refresh/images/activeSG_Logo.png?width=2500&amp;height=1190&amp;name=activeSG_Logo.png 2500w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/raw_assets/public/Circle%202-0_2021-%20Circle%20Website%20Refresh/images/activeSG_Logo.png?width=3000&amp;height=1428&amp;name=activeSG_Logo.png 3000w
+											"
+											sizes="(max-width: 1000px) 100vw, 1000px"
+									/></a>
+									<div
+										class="header-middle__menu d-flex align-items-center justify-content-center p-4"
+									>
+										Explore More
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="header__btns align-items-center justify-content-end">
+									<div class="btn btn--primary">Subscribe</div>
+									<div class="btn btn--secondary">
+										Book Facilities & Programmes
+										<i class="fa-solid fa-arrow-up-right-from-square"></i>
+									</div>
+									<div class="dropdown">
+										<button
+											type="button"
+											data-bs-toggle="dropdown"
+											aria-expanded="false"
+											data-bs-auto-close="outside"
+											class="search btn btn--primary"
+										>
+											<i class="fa-solid fa-magnifying-glass"></i>
+										</button>
+										<div class="dropdown-menu">
+											<form class="header__search">
+												<input
+													type="text"
+													placeholder="Search"
+													class="input"
+												/>
+												<button
+													type="button"
+													class="search-btn"
+												>
+													<i class="fa-solid fa-magnifying-glass"></i>
+												</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Header Menu Bottom -->
+				<div class="header-bottom container-fluid">
+					<div class="container">
+						<ul class="header-bottom__menu">
+							<li class="header-bottom__item">
+								<a
+									href="./read/read.html"
+									class="header-bottom__link"
+									>Read</a
+								>
+							</li>
+							<li class="header-bottom__item">
+								<a
+									href="#"
+									class="header-bottom__link"
+									>Watch</a
+								>
+							</li>
+							<li class="header-bottom__item">
+								<a
+									href="#"
+									class="header-bottom__link"
+									>Learn A Sport</a
+								>
+							</li>
+							<li class="header-bottom__item">
+								<a
+									href="#"
+									class="header-bottom__link"
+									>Things To Do <i class="fa-solid fa-chevron-down"></i
+								></a>
+								<ul class="submenu">
+									<li class="submenu__item">
+										<a
+											href="#"
+											class="submenu__link"
+											>Events</a
+										>
+									</li>
+									<li class="submenu__item">
+										<a
+											href="#"
+											class="submenu__link"
+											>Programmes</a
+										>
+									</li>
+									<li class="submenu__item">
+										<a
+											href="#"
+											class="submenu__link"
+											>ActiveSG School Holiday Programmes</a
+										>
+									</li>
+									<li class="submenu__item">
+										<a
+											href="#"
+											class="submenu__link"
+											>GameOn Nila!</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li class="header-bottom__item">
+								<a
+									href="#"
+									class="header-bottom__link"
+									>Be A Member <i class="fa-solid fa-chevron-down"></i
+								></a>
+								<ul class="submenu">
+									<li class="submenu__item">
+										<a
+											href="#"
+											class="submenu__link"
+											>Facilities</a
+										>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Breadcrumbs -->
+				<div class="container-fluid breadcrumbs-section">
+					<nav class="container breadcrums-wrapper">
+						<ol class="breadcrumbs-list">
+							<li class="breadcrumbs-item">
+								<a href="#">Home</a>
+								<i
+									class="fa-solid fa-chevron-right"
+									style="font-size: 0.625rem"
+								></i>
+							</li>
+							<li class="breadcrumbs-item current">
+								<a href="#">Read</a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</header>
+
+			<!-- Main Content -->
+			<main
+				id="main"
+				class="main container-fluid"
+			>
+				<!-- Banner Section -->
+				<section class="read__banner">
+					<div class="read__banner-wrapper">
+						<div class="read__banner-slider">
+							<div
+								class="read__banner-slider-item"
+								style="
+									background-image: url('https://www.activesgcircle.gov.sg/hubfs/5f3f7681-bae5-4d67-bc71-9d4ae4a7922b.jpg');
+								"
+							></div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			<footer
+				id="footer"
+				class="footer container-fluid"
+			>
+				<div class="footer-form container">
+					<h5 class="title">The Best of ActiveSG Circle delivered straight to you!</h5>
+					<form
+						class="form"
+						id="subscribe-form"
+					>
+						<div class="field">
+							<input
+								type="text"
+								id="name"
+								name="name"
+								required
+								placeholder="Name*"
+							/>
+						</div>
+						<div class="field">
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required
+								placeholder="Email Address*"
+							/>
+						</div>
+
+						<button
+							type="submit"
+							class="form-btn"
+						>
+							Subscribe
+						</button>
+					</form>
+				</div>
+				<div class="footer-bottom container">
+					<div class="footer-content">
+						<div class="footer-row">
+							<div class="footer-col footer-col-2">
+								<h5 class="title">ActiveSG Circle</h5>
+								<p>
+									ActiveSG Circle is Sport Singapore's online platform that aims to inspire and
+									empower the nation to live better through sport. With a variety of content: from
+									event listings, classes and programmes, to editorial articles and an extensive
+									library of video content, ActiveSG Circle is at the pulse of all things sport,
+									fitness and wellness, providing Singaporeans with a gateway to an active and
+									sporty lifestyle.
+								</p>
+							</div>
+							<div class="footer-col">
+								<h5 class="title">An Initiative of</h5>
+								<a
+									href="https://www.sportsingapore.gov.sg/?__hstc=107652957.a66fbb7b801ea0af772718435e0746ec.1692694185182.1692846535994.1692850014210.11&amp;__hssc=107652957.2.1692850014210&amp;__hsfp=1437546548"
+									target="_blank"
+									rel="noopener"
+									><img
+										src="https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/SportSG_Logo_Full_Colour_RGB.png?width=2000&amp;height=892&amp;name=SportSG_Logo_Full_Colour_RGB.png"
+										alt="Sport Singapore"
+										loading="lazy"
+										width="2000"
+										height="892"
+										style="max-width: 100%; height: auto"
+										srcset="
+											https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/SportSG_Logo_Full_Colour_RGB.png?width=1000&amp;height=446&amp;name=SportSG_Logo_Full_Colour_RGB.png  1000w,
+											https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/SportSG_Logo_Full_Colour_RGB.png?width=2000&amp;height=892&amp;name=SportSG_Logo_Full_Colour_RGB.png  2000w,
+											https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/SportSG_Logo_Full_Colour_RGB.png?width=3000&amp;height=1338&amp;name=SportSG_Logo_Full_Colour_RGB.png 3000w,
+											https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/SportSG_Logo_Full_Colour_RGB.png?width=4000&amp;height=1784&amp;name=SportSG_Logo_Full_Colour_RGB.png 4000w,
+											https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/SportSG_Logo_Full_Colour_RGB.png?width=5000&amp;height=2230&amp;name=SportSG_Logo_Full_Colour_RGB.png 5000w,
+											https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/SportSG_Logo_Full_Colour_RGB.png?width=6000&amp;height=2676&amp;name=SportSG_Logo_Full_Colour_RGB.png 6000w
+										"
+										sizes="(max-width: 2000px) 100vw, 2000px"
+								/></a>
+							</div>
+							<div class="footer-col">
+								<h5 class="title">Download the App</h5>
+								<div class="box">
+									<div class="box-item">
+										<img
+											src="https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20Refresh/images/activewallet.png?width=613&amp;height=613&amp;name=activewallet.png"
+											alt="ActiveWallet"
+											loading="lazy"
+											width="613"
+											height="613"
+											style="max-width: 100%; height: auto"
+											srcset="
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20Refresh/images/activewallet.png?width=307&amp;height=307&amp;name=activewallet.png    307w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20Refresh/images/activewallet.png?width=613&amp;height=613&amp;name=activewallet.png    613w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20Refresh/images/activewallet.png?width=920&amp;height=920&amp;name=activewallet.png    920w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20Refresh/images/activewallet.png?width=1226&amp;height=1226&amp;name=activewallet.png 1226w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20Refresh/images/activewallet.png?width=1533&amp;height=1533&amp;name=activewallet.png 1533w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20Refresh/images/activewallet.png?width=1839&amp;height=1839&amp;name=activewallet.png 1839w
+											"
+											sizes="(max-width: 613px) 100vw, 613px"
+										/>
+									</div>
+									<div class="box-item">
+										<img
+											src="https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/activehealth.png?width=613&amp;height=613&amp;name=activehealth.png"
+											alt="Active Health"
+											loading="lazy"
+											width="613"
+											height="613"
+											style="max-width: 100%; height: auto"
+											srcset="
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/activehealth.png?width=307&amp;height=307&amp;name=activehealth.png    307w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/activehealth.png?width=613&amp;height=613&amp;name=activehealth.png    613w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/activehealth.png?width=920&amp;height=920&amp;name=activehealth.png    920w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/activehealth.png?width=1226&amp;height=1226&amp;name=activehealth.png 1226w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/activehealth.png?width=1533&amp;height=1533&amp;name=activehealth.png 1533w,
+												https://www.activesgcircle.gov.sg/hs-fs/hubfs/ActiveSG%20Circle%202023Theme/images/activehealth.png?width=1839&amp;height=1839&amp;name=activehealth.png 1839w
+											"
+											sizes="(max-width: 613px) 100vw, 613px"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer-menu">
+							<a
+								href="#"
+								class="link"
+								>Home</a
+							>
+							<a
+								href="#"
+								class="link"
+								>About Us</a
+							>
+							<a
+								href="#"
+								class="link"
+								>Contact Us</a
+							>
+							<a
+								href="#"
+								class="link"
+								>Commercial Leasing</a
+							>
+							<a
+								href="#"
+								class="link"
+								>FAQ</a
+							>
+						</div>
+
+						<div class="footer-policy">
+							<div class="left">
+								<a
+									href=""
+									class="link"
+								>
+									<span>Report Vulnerability</span>
+									<i class="fa-solid fa-up-right-from-square"></i>
+								</a>
+								<a
+									href=""
+									class="link"
+									><span>Privacy Statement</span>
+									<i class="fa-solid fa-up-right-from-square"></i>
+								</a>
+								<a
+									href=""
+									class="link"
+								>
+									<span>Terms of use</span>
+									<i class="fa-solid fa-up-right-from-square"></i>
+								</a>
+							</div>
+							<div class="right">
+								<p>© 2023 Sport Singapore, Last Updated 28 Apr 2023</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Bootstrap -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Font awesome -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+			integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<!-- JQuery -->
+		<script
+			src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+			integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Slick slider -->
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+
+		<script src="../src/js/read-banner-slider.js"></script>
+	</body>
+</html>

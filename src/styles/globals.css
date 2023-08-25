@@ -1,0 +1,52 @@
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-bd);
+	font-size: 1rem;
+	font-weight: var(--font-normal);
+
+	color: var(--color-text);
+	background-color: var(--color-white);
+}
+
+button,
+input {
+	border: none;
+	outline: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.white {
+	color: var(--color-white) !important;
+}
+
+.bg-white {
+	color: var(--color-secondary) !important;
+	background-color: var(--color-white) !important;
+	transition: all 0.15s ease;
+}
+
+.bg-white:hover {
+	color: var(--color-white) !important;
+	background-color: var(--color-secondary) !important;
+}
